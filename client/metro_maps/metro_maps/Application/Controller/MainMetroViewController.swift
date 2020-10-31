@@ -8,15 +8,19 @@
 import UIKit
 import RealmSwift
 
+var statusSubView = false
 
-var startPointDelegate = ""
-var buttonPosition = CGPoint
+var bufferSelected = ""
 class MainMetroViewController: UIViewController {
-    @IBOutlet weak var startPoint: UILabel!
+    @IBOutlet weak var bottomView: MaterialView!
     var stationID  : Results<ModelStation>!
-    @IBOutlet weak var endPoint: UILabel!
+    @IBOutlet weak var fromField: UITextField!
+    @IBOutlet weak var toField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bottomView.isHidden = !statusSubView
+        
         let button = UIButton(frame: CGRect(x: 100,
                                                     y: 100,
                                                     width: 200,
@@ -33,8 +37,8 @@ class MainMetroViewController: UIViewController {
                 self.view.addSubview(button)
         
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(setPosition),
-                                               name: NSNotification.Name("setPosition"),
+                                               selector: #selector(subView),
+                                               name: NSNotification.Name("addSubView"),
                                                object: nil)
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
@@ -45,14 +49,24 @@ class MainMetroViewController: UIViewController {
         RealmService.shared.createStation(pop)
         // Do any additional setup after loading the view.
     }
-    
-       // slect position
-    @objc func setPosition() {
-        startPoint.text = startPointDelegate
+
+    // slect position
+    @objc func subView() {
+        bottomView.isHidden = false//!statusSubView
     }
+
     @objc func buttonAction() {
           print("Button pressed")
       }
+    @IBAction func fromStation(_ sender: Any) {
+        fromField.text = bufferSelected
+    }
+    
+    @IBAction func toStation(_ sender: Any) {
+        toField.text = bufferSelected
+        NotificationCenter.default.post(name: NSNotification.Name("routeBuild"), object: nil)
+        bottomView.isHidden = true
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

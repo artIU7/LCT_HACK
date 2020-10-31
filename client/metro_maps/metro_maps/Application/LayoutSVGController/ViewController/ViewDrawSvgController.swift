@@ -23,6 +23,7 @@ var stationNode = [String]()
 class SVGMacawView: MacawView {
 
     var delegate : SVGMacawViewDelegate?
+    private var allArray = [String]()
     private var pathArray = [String]()
     
     init(template: String, frame : CGRect) {
@@ -59,6 +60,8 @@ class SVGMacawView: MacawView {
                 contents.insert(backgroundShape, at: 0)
                 group.contents = contents
                 self.node = group
+                //self.node.opacity = 0.5
+                
                 if let url = Bundle.main.url(forResource: template, withExtension: "svg") {
                     if let xmlString = try? String(contentsOf: url) {
                         let xml = SWXMLHash.parse(xmlString)
@@ -66,22 +69,26 @@ class SVGMacawView: MacawView {
                         pathRoute = pathRoute.map({"station-path-"+$0})
                         print("route :\(pathRoute)")
                         pathArray = [
-                            "station-path-8fe7734a-471a-11e5-9691-a305092d2f10_8fe15b9a-471a-11e5-93b1-e840e2132458",
-                            "station-path-8fed8b7c-471a-11e5-a38f-9cc779261834_8fe7734a-471a-11e5-9691-a305092d2f10",
-                            "station-path-8ff35ef8-471a-11e5-b58f-d9873b2d97a0_8fed8b7c-471a-11e5-a38f-9cc779261834",
-                            "station-path-8ff9552e-471a-11e5-aa10-d33191d3c698_8ff35ef8-471a-11e5-b58f-d9873b2d97a0",
-                            "station-path-8fff2b84-471a-11e5-87fe-24f90d40a37c_8ff9552e-471a-11e5-aa10-d33191d3c698",
-                            "station-path-9005523e-471a-11e5-a6b5-066cb81ffc1a_8fff2b84-471a-11e5-87fe-24f90d40a37c",
-                            "station-path-900b8078-471a-11e5-a4cb-96905f9ce89c_9005523e-471a-11e5-a6b5-066cb81ffc1a",
-                            "station-transition-900b8078-471a-11e5-a4cb-96905f9ce89c_91164b88-471a-11e5-a539-9c44d7e6d60c",
-                            "station-transition-91e22b18-471a-11e5-8a1a-862c0e9ff412_91164b88-471a-11e5-a539-9c44d7e6d60c",
-                            "station-path-91e22b18-471a-11e5-8a1a-862c0e9ff412_91e78cac-471a-11e5-9b34-ea1fe7e22ce3",
-                            "station-transition-91e78cac-471a-11e5-9b34-ea1fe7e22ce3_8d7c4306-471a-11e5-ac4c-d3205eae3d5c",
-                            "station-path-8d7c4306-471a-11e5-ac4c-d3205eae3d5c_8d75e060-471a-11e5-9c8f-ed332b49875f",
-                            "station-path-8d75e060-471a-11e5-9c8f-ed332b49875f_8d6f270c-471a-11e5-bda5-c0cbff6061ac",
-                            "station-path-8d6f270c-471a-11e5-bda5-c0cbff6061ac_8d689310-471a-11e5-addd-7951056f7282",
-                            "station-path-8d689310-471a-11e5-addd-7951056f7282_8d623c5e-471a-11e5-ab6e-fb7263b9cb1c",
-                            "station-path-8d623c5e-471a-11e5-ab6e-fb7263b9cb1c_8d58b80a-471a-11e5-9cc3-1a839c21e9f2"
+                            "station-8fe15b9a-471a-11e5-93b1-e840e2132458",
+                            "station-8fe7734a-471a-11e5-9691-a305092d2f10",
+                            "station-8fed8b7c-471a-11e5-a38f-9cc779261834",
+                            "station-8ff35ef8-471a-11e5-b58f-d9873b2d97a0",
+                            "station-8ff9552e-471a-11e5-aa10-d33191d3c698",
+                            "station-8fff2b84-471a-11e5-87fe-24f90d40a37c",
+                            "station-9005523e-471a-11e5-a6b5-066cb81ffc1a",
+                            "station-91164b88-471a-11e5-a539-9c44d7e6d60c",
+                            "station-900b8078-471a-11e5-a4cb-96905f9ce89c",
+                            "station-91e22b18-471a-11e5-8a1a-862c0e9ff412",
+                            "station-91e78cac-471a-11e5-9b34-ea1fe7e22ce3",
+                            "station-91e78cac-471a-11e5-9b34-ea1fe7e22ce3",
+                            "station-8d7c4306-471a-11e5-ac4c-d3205eae3d5c",
+                            "station-8d75e060-471a-11e5-9c8f-ed332b49875f",
+                            "station-8d6f270c-471a-11e5-bda5-c0cbff6061ac",
+                            "station-8d689310-471a-11e5-addd-7951056f7282",
+                            "station- 8d623c5e-471a-11e5-ab6e-fb7263b9cb1c",
+                            "station-8d58b80a-471a-11e5-9cc3-1a839c21e9f2",
+                            "station-8d840dfc-471a-11e5-b4e2-0a84b4bb2568",
+                            "station-911cd200-471a-11e5-8c31-23afc3f737bc"
                         ]
        //                 pathArray = pathArray.filter ({
                          //  $0 == "station-transition-900b8078-471a-11e5-a4cb-96905f9ce89c_91164b88-471a-11e5-a539-9c44d7e6d60c"
@@ -133,12 +140,45 @@ class SVGMacawView: MacawView {
                     }
                 }
             } else {
+               // node.opacity = 0.7
                 self.node = node
             }
 
             // layout
             self.contentMode = .scaleAspectFit
         }
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(drawRoute),
+                                               name: NSNotification.Name("routeBuild"),
+                                               object: nil)
+    }
+ 
+    @objc func drawRoute() {
+        self.hideAll()
+        let stationShow = self.findPath()
+        for statiom in stationShow {
+            
+            let stationPath = self.node.nodeBy(tag: "station-"+statiom)
+            let nodeStation = stationPath as! Shape
+            nodeStation.opacity = 1.0
+            nodeStation.stroke = Stroke(fill: Color(val: 0xff9e4f), width: 2)
+            
+            let stationPathCaption = self.node.nodeBy(tag: "station-caption-"+statiom)
+            let nodePathCaption = stationPathCaption as! Group
+            let fText = nodePathCaption.contents.first as! Text//.fill = Color.aliceBlue
+            //   f.fill = Color.blue
+            fText.opacity = 1.0
+            fText.fill = Color.darkBlue
+        }
+       // self.node.
+        
+    }
+    func hideAll() {
+        allArray.map({
+            self.node.nodeBy(tag: $0)?.opacity = 0.3
+        })
+        //self.node.opacity = 0.3
+        
     }
     func fromRealmObject() {
         var stations = try! Realm().objects(ModelStation.self)
@@ -150,6 +190,7 @@ class SVGMacawView: MacawView {
                 if let idAttribute = element.attribute(by: "id") {
                     let text = idAttribute.text
                     pathArray.append(text)
+                    allArray.append(text)
                 }
             }
             enumerate(indexer: child, level: level + 1)
@@ -176,16 +217,18 @@ class SVGMacawView: MacawView {
                 }
                 nodeSelectGroup.opacity = 0.7
                 nodeSelectGroup.fill = Color.green
-                NotificationCenter.default.post(name: NSNotification.Name("setPosition"), object: nil)
-                startPointDelegate = "Новогиреево"
+                NotificationCenter.default.post(name: NSNotification.Name("addSubView"), object: nil)
+
                 print(nodeSelectGroup.bounds)
+                bufferSelected = "Новогиреево"
+                statusSubView = true
                 let nodeTextStart = self.node.nodeBy(tag: stationCaption.last!)
                 let nodeTextEnd = self.node.nodeBy(tag: stationCaption.first!)
                 let nodeTextStartT = nodeTextStart as! Text
                 nodeTextStartT.fill = Color.green
                 let nodeTextEndT = nodeTextEnd as! Text
                 nodeTextEndT.fill = Color.green
-                let stationShow = self.findPath()
+                /*
                 for statiom in stationShow {
                     let stationPath = self.node.nodeBy(tag: "station-"+statiom)
                     let nodeStation = stationPath as! Shape
@@ -195,8 +238,8 @@ class SVGMacawView: MacawView {
                    // let nodeStationCaption = stationPathCaption as! Text
                    // nodeStationCaption.fill = Color.green
                     
-                }
-                var newPath = [String]()
+                } */
+               // var newPath = [String]()
                 /*for i in 0...stationShow.count - 1 {
                         if i != 8 {
                             if newPath.isEmpty {
@@ -210,20 +253,20 @@ class SVGMacawView: MacawView {
                             }
                     }
                 } */
-                print("find path :\(newPath)")
-                for inPath in newPath {
-                        let stationPath = self.node.nodeBy(tag: inPath)
-                        let nodeStation = stationPath as! Shape
-                        nodeStation.fill = Color.blue
-                }
+              //  print("find path :\(newPath)")
+              //  for inPath in newPath {
+              //          let stationPath = self.node.nodeBy(tag: inPath)
+               //         let nodeStation = stationPath as! Shape
+               //         nodeStation.fill = Color.blue
+            //    }
                 self.fromRealmObject()
             } else if typeNode == Text.self {
-                let labelStation = nodeShape as! Text
-                labelStation.fill = Color.green
+             //   let labelStation = nodeShape as! Text
+              //  labelStation.fill = Color.green
             } else if typeNode == Group.self {
-                let grad = nodeShape as! Group
-                let f = grad.contents.first as! Shape//.fill = Color.aliceBlue
-                f.fill = Color.blue
+             //   let grad = nodeShape as! Group
+             //   let f = grad.contents.first as! Shape//.fill = Color.aliceBlue
+             //   f.fill = Color.blue
             }
             //nodeSelect.fill = Color.blue
             self.delegate?.getId(id: nodeTag)

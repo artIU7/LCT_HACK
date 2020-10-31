@@ -22,6 +22,7 @@
 		B7FD57DF254DA26400A31385 /* mt_hack_2020.svg in Resources */ = {isa = PBXBuildFile; fileRef = B7FD57DE254DA26400A31385 /* mt_hack_2020.svg */; };
 		B7FD57E4254DA97400A31385 /* ModelStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57E3254DA97400A31385 /* ModelStation.swift */; };
 		B7FD57F0254DAB4F00A31385 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57EF254DAB4F00A31385 /* RealmController.swift */; };
+		B7FD5807254DDBCA00A31385 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5806254DDBCA00A31385 /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B7FD57DE254DA26400A31385 /* mt_hack_2020.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = mt_hack_2020.svg; sourceTree = SOURCE_ROOT; };
 		B7FD57E3254DA97400A31385 /* ModelStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStation.swift; sourceTree = "<group>"; };
 		B7FD57EF254DAB4F00A31385 /* RealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
+		B7FD5806254DDBCA00A31385 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			children = (
 				B7F1640A254D713E00008FBB /* AppDelegate.swift */,
 				B7F1640C254D713E00008FBB /* SceneDelegate.swift */,
+				B7FD5806254DDBCA00A31385 /* MaterialView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				B7FD57D5254D9FD600A31385 /* ScrollViewControllerLayout.swift in Sources */,
 				B7F1640B254D713E00008FBB /* AppDelegate.swift in Sources */,
 				B7FD57CC254D9F1200A31385 /* SVGLayoutController.swift in Sources */,
+				B7FD5807254DDBCA00A31385 /* MaterialView.swift in Sources */,
 				B7FD57E4254DA97400A31385 /* ModelStation.swift in Sources */,
 				B7FD57C4254D9D7600A31385 /* MainMetroViewController.swift in Sources */,
 				B7FD57C7254D9DF400A31385 /* helper_NodeName.swift in Sources */,

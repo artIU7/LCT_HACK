@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B72CBEA9-1D2F-4C54-A193-B83A5E3EC4E4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "registerForSelection(nodeTag:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "45013ACB-D323-4917-9BC7-5B14BB3B06C3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -30,8 +14,8 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
             landmarkName = "registerForSelection(nodeTag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,24 +30,8 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
-            landmarkName = "registerForSelection(nodeTag:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "40A8F7E3-FDC4-48C8-A81D-6C444AB8186A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "registerForSelection(nodeTag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +46,8 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "registerForSelection(nodeTag:)"
             landmarkType = "7">
             <Locations>
@@ -126,8 +94,8 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "registerForSelection(nodeTag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +110,8 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "registerForSelection(nodeTag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +126,8 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "registerForSelection(nodeTag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +142,8 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "registerForSelection(nodeTag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +158,8 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "registerForSelection(nodeTag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +174,8 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "registerForSelection(nodeTag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,25 +190,9 @@
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "registerForSelection(nodeTag:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "04CD9BDC-C514-4755-9DF1-F43DA08943AD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "metro_maps/Application/Controller/MainMetroViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "setPosition()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -248,15 +200,63 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "041FE638-470C-4B13-ADB5-F00055AEC495"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "registerForSelection(nodeTag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E3A0780-7F47-4965-900D-54550A315D86"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "metro_maps/Application/Controller/MainMetroViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "subView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "001697F4-87AC-4C89-9D2F-474C42F157E6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "drawRoute()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3B30DBF-E62A-4EC4-8767-829DFEED1462"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "init(template:frame:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
