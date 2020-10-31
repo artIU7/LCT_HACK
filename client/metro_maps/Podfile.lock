@@ -1,0 +1,34 @@
+PODS:
+  - HEREMaps (3.17.2)
+  - Macaw (0.9.7):
+    - SWXMLHash
+  - Realm (10.1.1):
+    - Realm/Headers (= 10.1.1)
+  - Realm/Headers (10.1.1)
+  - RealmSwift (10.1.1):
+    - Realm (= 10.1.1)
+  - SWXMLHash (5.0.1)
+
+DEPENDENCIES:
+  - HEREMaps
+  - Macaw (= 0.9.7)
+  - RealmSwift
+
+SPEC REPOS:
+  trunk:
+    - HEREMaps
+    - Macaw
+    - Realm
+    - RealmSwift
+    - SWXMLHash
+
+SPEC CHECKSUMS:
+  HEREMaps: 8ddbfefc38a2c18a273bee79d8aaeb793f6f758d
+  Macaw: 4a931baf9a9826b06d0d8ecf300014c962ab9d50
+  Realm: 784ca1da1453e31a9c9adc14445421a81f316119
+  RealmSwift: cc52fe0dcea56387274dff36e19219e055a3bb84
+  SWXMLHash: 9cc0c2e4807926c74377724aa8722ee5707a0485
+
+PODFILE CHECKSUM: 9057ab75b6b20a477d8ec4fe88692b5cfb4368d2
+
+COCOAPODS: 1.10.0

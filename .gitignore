@@ -1,0 +1,13 @@
+/server/metro_service/.build/*
+/server/metro_service/.swiftpm
+/server/metro_service/.git/*
+/server/metro_service/.gitigbore
+/server/metro_service/.dockerignore
+/server/metro_service/docker-compose.yml
+/server/metro_service/Dockerfile
+/server/metro_service/Package.resolved
+/server/metro_service/no_commit/*
+/client/metro_maps/Pods/*
+/sketch/*
+/presentation/Видео/*
+/presentation/задание/*
