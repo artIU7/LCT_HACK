@@ -20,6 +20,7 @@ protocol SVGMacawViewDelegate {
 }
 var stationCaption = [String]()
 var stationNode = [String]()
+var pathArrayDeykstra = [String]()
 class SVGMacawView: MacawView {
 
     var delegate : SVGMacawViewDelegate?
@@ -42,6 +43,24 @@ class SVGMacawView: MacawView {
                          "91164b88-471a-11e5-a539-9c44d7e6d60c", // Курская
                          "8d840dfc-471a-11e5-b4e2-0a84b4bb2568", // Марксистская
                          "911cd200-471a-11e5-8c31-23afc3f737bc",
+        ]
+        pathArrayDeykstra = [
+            "station-path-8fe7734a-471a-11e5-9691-a305092d2f10_8fe15b9a-471a-11e5-93b1-e840e2132458",
+            "station-path-8fed8b7c-471a-11e5-a38f-9cc779261834_8fe7734a-471a-11e5-9691-a305092d2f10",
+            "station-path-8ff35ef8-471a-11e5-b58f-d9873b2d97a0_8fed8b7c-471a-11e5-a38f-9cc779261834",
+            "station-path-8ff9552e-471a-11e5-aa10-d33191d3c698_8ff35ef8-471a-11e5-b58f-d9873b2d97a0",
+            "station-path-8fff2b84-471a-11e5-87fe-24f90d40a37c_8ff9552e-471a-11e5-aa10-d33191d3c698",
+            "station-path-9005523e-471a-11e5-a6b5-066cb81ffc1a_8fff2b84-471a-11e5-87fe-24f90d40a37c",
+            "station-path-900b8078-471a-11e5-a4cb-96905f9ce89c_9005523e-471a-11e5-a6b5-066cb81ffc1a",
+            "station-transition-900b8078-471a-11e5-a4cb-96905f9ce89c_91164b88-471a-11e5-a539-9c44d7e6d60c",
+            "station-transition-91e22b18-471a-11e5-8a1a-862c0e9ff412_91164b88-471a-11e5-a539-9c44d7e6d60c",
+            "station-path-91e22b18-471a-11e5-8a1a-862c0e9ff412_91e78cac-471a-11e5-9b34-ea1fe7e22ce3",
+            "station-transition-91e78cac-471a-11e5-9b34-ea1fe7e22ce3_8d7c4306-471a-11e5-ac4c-d3205eae3d5c",
+            "station-path-8d7c4306-471a-11e5-ac4c-d3205eae3d5c_8d75e060-471a-11e5-9c8f-ed332b49875f",
+            "station-path-8d75e060-471a-11e5-9c8f-ed332b49875f_8d6f270c-471a-11e5-bda5-c0cbff6061ac",
+            "station-path-8d6f270c-471a-11e5-bda5-c0cbff6061ac_8d689310-471a-11e5-addd-7951056f7282",
+            "station-path-8d689310-471a-11e5-addd-7951056f7282_8d623c5e-471a-11e5-ab6e-fb7263b9cb1c",
+            "station-path-8d623c5e-471a-11e5-ab6e-fb7263b9cb1c_8d58b80a-471a-11e5-9cc3-1a839c21e9f2"
         ]
         var pathRoute = [String]()
         let link = true
@@ -90,6 +109,7 @@ class SVGMacawView: MacawView {
                             "station-8d840dfc-471a-11e5-b4e2-0a84b4bb2568",
                             "station-911cd200-471a-11e5-8c31-23afc3f737bc"
                         ]
+                        
        //                 pathArray = pathArray.filter ({
                          //  $0 == "station-transition-900b8078-471a-11e5-a4cb-96905f9ce89c_91164b88-471a-11e5-a539-9c44d7e6d60c"
                           //  })//
@@ -154,28 +174,64 @@ class SVGMacawView: MacawView {
     }
  
     @objc func drawRoute() {
+        if nodeStation.isEmpty {
+            self.initGraph()
+        }
         self.hideAll()
-        let stationShow = self.findPath()
+        let stationShow = self.findPath(startPoint: 2, endPoint: 7)
         for statiom in stationShow {
             
             let stationPath = self.node.nodeBy(tag: "station-"+statiom)
             let nodeStation = stationPath as! Shape
             nodeStation.opacity = 1.0
             nodeStation.stroke = Stroke(fill: Color(val: 0xff9e4f), width: 2)
-            
-            let stationPathCaption = self.node.nodeBy(tag: "station-caption-"+statiom)
-            let nodePathCaption = stationPathCaption as! Group
-            let fText = nodePathCaption.contents.first as! Text//.fill = Color.aliceBlue
-            //   f.fill = Color.blue
-            fText.opacity = 1.0
-            fText.fill = Color.darkBlue
         }
+        var pathRoute = try! Realm().objects(ModelPath.self)
+        print(pathRoute)
+        for elemnet in pathRoute {
+            for i  in 0...stationShow.count - 2 {
+                if (elemnet.staionIDStart == stationShow[i] ||
+                   elemnet.staionIDStart == stationShow[i+1]) &&
+                   (elemnet.staionIDStart == stationShow[i + 1] ||
+                   elemnet.staionIDStart == stationShow[i])
+                    {
+                    let stationPath = self.node.nodeBy(tag: elemnet.id)
+                    let typeNode = type(of: stationPath!)
+                    if typeNode == Shape.self {
+                        let nodeStation = stationPath as! Shape
+                        nodeStation.opacity = 1.0
+                        nodeStation.stroke = Stroke(fill: Color.white, width: 2)
+                    } else {
+                        let grad = stationPath as! Group
+                        let nodeStation = grad.contents.first as! Shape//.fill = Color.aliceBlue
+                        nodeStation.opacity = 1.0
+                        nodeStation.stroke = Stroke(fill: Color.white, width: 2)
+                    }
+                }
+            }
+        }
+        
+       /* for pArray in pathArrayDeykstra {
+            let stationPath = self.node.nodeBy(tag: pArray)
+            let typeNode = type(of: stationPath!)
+            if typeNode == Shape.self {
+                let nodeStation = stationPath as! Shape
+                nodeStation.opacity = 1.0
+                nodeStation.stroke = Stroke(fill: Color.white, width: 2)
+            } else {
+                let grad = stationPath as! Group
+                let nodeStation = grad.contents.first as! Shape//.fill = Color.aliceBlue
+                nodeStation.opacity = 1.0
+                nodeStation.stroke = Stroke(fill: Color.white, width: 2)
+            }
+         
+        }*/
        // self.node.
         
     }
     func hideAll() {
         allArray.map({
-            self.node.nodeBy(tag: $0)?.opacity = 0.3
+            self.node.nodeBy(tag: $0)?.opacity = 0.1
         })
         //self.node.opacity = 0.3
         
@@ -183,6 +239,10 @@ class SVGMacawView: MacawView {
     func fromRealmObject() {
         var stations = try! Realm().objects(ModelStation.self)
         print(stations)
+    }
+    func fromRealmObjectPath() {
+        var pathRoute = try! Realm().objects(ModelPath.self)
+        print(pathRoute)
     }
     private func enumerate(indexer: XMLIndexer, level: Int) {
         for child in indexer.children {
@@ -305,16 +365,21 @@ class SVGMacawView: MacawView {
             "91164b88-471a-11e5-a539-9c44d7e6d60c_911cd200-471a-11e5-8c31-23afc3f737bc", // Таганская- Курская
         ]
     }
-    func findPath() -> [String] {
-        stationID.map({
-            nodeStation.append(MyNode(name: $0))
-        })
-        print(nodeStation)
-        // init matrix graph
+    func initGraph() {
+        let stationRealm = try! Realm().objects(ModelStation.self)
+        var pathRealm = try! Realm().objects(ModelPath.self)
+        print("init ::: \(stationRealm)")
+        print("init ::: \(pathRealm)")
+        for station in stationRealm {
+            nodeStation.append(MyNode(name: station.id))
+        }
         for i in 0...nodeStation.count - 1 {
             for j in 0...nodeStation.count - 1 {
-                for path in linkPath {
-                    if path == nodeStation[i].name + "_" + nodeStation[j].name {
+                
+                for path in pathRealm {
+                    if path.id == "station-path-" + nodeStation[i].name + "_" + nodeStation[j].name ||
+                    path.id == "station-transition" + nodeStation[i].name + "_" + nodeStation[j].name
+                        {
                         print("connection - true")
                         nodeStation[i].connections.append(Connection(to: nodeStation[j], weight: 3 + i + j))
                         nodeStation[j].connections.append(Connection(to: nodeStation[i], weight: 3 + i + j))
@@ -322,8 +387,10 @@ class SVGMacawView: MacawView {
                 }
             }
         }
-        let sourceNode = nodeStation[0]
-        let destinationNode = nodeStation[8]
+    }
+    func findPath(startPoint : Int,endPoint : Int) -> [String] {
+        let sourceNode = nodeStation[startPoint]
+        let destinationNode = nodeStation[endPoint]
 
         var path = shortestPath(source: sourceNode, destination: destinationNode)
 
