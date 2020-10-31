@@ -178,10 +178,10 @@ class SVGMacawView: MacawView {
             self.initGraph()
         }
         self.hideAll()
-        let stationShow = self.findPath(startPoint: 2, endPoint: 7)
+        let stationShow = self.findPath(startPoint: 0, endPoint: 10)
         for statiom in stationShow {
             
-            let stationPath = self.node.nodeBy(tag: "station-"+statiom)
+            let stationPath = self.node.nodeBy(tag: statiom)
             let nodeStation = stationPath as! Shape
             nodeStation.opacity = 1.0
             nodeStation.stroke = Stroke(fill: Color(val: 0xff9e4f), width: 2)
@@ -378,7 +378,7 @@ class SVGMacawView: MacawView {
                 
                 for path in pathRealm {
                     if path.id == "station-path-" + nodeStation[i].name + "_" + nodeStation[j].name ||
-                    path.id == "station-transition" + nodeStation[i].name + "_" + nodeStation[j].name
+                    path.id == "station-transition-" + nodeStation[i].name + "_" + nodeStation[j].name
                         {
                         print("connection - true")
                         nodeStation[i].connections.append(Connection(to: nodeStation[j], weight: 3 + i + j))

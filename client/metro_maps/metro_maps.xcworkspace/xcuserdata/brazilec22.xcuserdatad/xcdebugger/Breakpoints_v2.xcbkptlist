@@ -296,7 +296,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2C29088E-A350-4CE2-BE3A-1E0764F1D366"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "metro_maps/Application/LayoutSVGController/ViewController/ViewDrawSvgController.swift"
