@@ -115,9 +115,10 @@ class MainMetroViewController: UIViewController {
     @IBAction func toStation(_ sender: Any) {
         toField.text = bufferSelected
         NotificationCenter.default.post(name: NSNotification.Name("routeBuild"), object: nil)
-        
-        bottomView.isHidden = true
-        statusIndex = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [self] in
+            bottomView.isHidden = true
+            statusIndex = false
+        }
     }
     // MARK: - Navigation
 
