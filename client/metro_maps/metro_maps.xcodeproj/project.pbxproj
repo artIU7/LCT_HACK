@@ -20,6 +20,8 @@
 		B7FD57D8254DA06A00A31385 /* ViewDrawSvgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57D7254DA06A00A31385 /* ViewDrawSvgController.swift */; };
 		B7FD57DC254DA0C300A31385 /* ComputedRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57DB254DA0C300A31385 /* ComputedRoute.swift */; };
 		B7FD57DF254DA26400A31385 /* mt_hack_2020.svg in Resources */ = {isa = PBXBuildFile; fileRef = B7FD57DE254DA26400A31385 /* mt_hack_2020.svg */; };
+		B7FD57E4254DA97400A31385 /* ModelStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57E3254DA97400A31385 /* ModelStation.swift */; };
+		B7FD57F0254DAB4F00A31385 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57EF254DAB4F00A31385 /* RealmController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +40,9 @@
 		B7FD57D4254D9FD600A31385 /* ScrollViewControllerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerLayout.swift; sourceTree = "<group>"; };
 		B7FD57D7254DA06A00A31385 /* ViewDrawSvgController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDrawSvgController.swift; sourceTree = "<group>"; };
 		B7FD57DB254DA0C300A31385 /* ComputedRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputedRoute.swift; sourceTree = "<group>"; };
-		B7FD57DE254DA26400A31385 /* mt_hack_2020.svg */ = {isa = PBXFileReference; lastKnownFileType = file; path = mt_hack_2020.svg; sourceTree = SOURCE_ROOT; };
+		B7FD57DE254DA26400A31385 /* mt_hack_2020.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = mt_hack_2020.svg; sourceTree = SOURCE_ROOT; };
+		B7FD57E3254DA97400A31385 /* ModelStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStation.swift; sourceTree = "<group>"; };
+		B7FD57EF254DAB4F00A31385 /* RealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 		E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +100,7 @@
 		B7FD57B9254D9C5200A31385 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				B7FD57E1254DA94400A31385 /* RealmMetroStation */,
 				B7FD57DA254DA0A300A31385 /* RouteFindClass */,
 				B7FD57CF254D9F7B00A31385 /* ScrollViewLayoutController */,
 				B7FD57C9254D9EED00A31385 /* LayoutSVGController */,
@@ -163,6 +168,23 @@
 				B7FD57DB254DA0C300A31385 /* ComputedRoute.swift */,
 			);
 			path = RouteFindClass;
+			sourceTree = "<group>";
+		};
+		B7FD57E1254DA94400A31385 /* RealmMetroStation */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD57E2254DA95400A31385 /* Model */,
+			);
+			path = RealmMetroStation;
+			sourceTree = "<group>";
+		};
+		B7FD57E2254DA95400A31385 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD57E3254DA97400A31385 /* ModelStation.swift */,
+				B7FD57EF254DAB4F00A31385 /* RealmController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E3D873DCDAD9393DA165A28D /* Frameworks */ = {
@@ -288,9 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FD57F0254DAB4F00A31385 /* RealmController.swift in Sources */,
 				B7FD57D5254D9FD600A31385 /* ScrollViewControllerLayout.swift in Sources */,
 				B7F1640B254D713E00008FBB /* AppDelegate.swift in Sources */,
 				B7FD57CC254D9F1200A31385 /* SVGLayoutController.swift in Sources */,
+				B7FD57E4254DA97400A31385 /* ModelStation.swift in Sources */,
 				B7FD57C4254D9D7600A31385 /* MainMetroViewController.swift in Sources */,
 				B7FD57C7254D9DF400A31385 /* helper_NodeName.swift in Sources */,
 				B7F1640D254D713E00008FBB /* SceneDelegate.swift in Sources */,

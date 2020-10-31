@@ -6,12 +6,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainMetroViewController: UIViewController {
-
+    var stationID  : Results<ModelStation>!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        let realms = RealmService.shared.realm
+        let pop = ModelStation(id : "1",
+                               nameStation : "2",
+                               lineID : "3")
+        RealmService.shared.createStation(pop)
         // Do any additional setup after loading the view.
     }
     

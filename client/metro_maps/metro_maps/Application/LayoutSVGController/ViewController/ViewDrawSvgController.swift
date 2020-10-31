@@ -8,7 +8,7 @@
 import UIKit
 import Macaw
 import SWXMLHash
-
+import RealmSwift
 
 var stationID = [String]()
 var nodeStation = [MyNode]()
@@ -22,7 +22,6 @@ var stationNode = [String]()
 class SVGMacawView: MacawView {
 
     var delegate : SVGMacawViewDelegate?
-    
     private var pathArray = [String]()
     
     init(template: String, frame : CGRect) {
@@ -114,7 +113,10 @@ class SVGMacawView: MacawView {
             self.contentMode = .scaleAspectFit
         }
     }
-    
+    func fromRealmObject() {
+        var stations = try! Realm().objects(ModelStation.self)
+        print(stations)
+    }
     private func enumerate(indexer: XMLIndexer, level: Int) {
         for child in indexer.children {
             if let element = child.element {
@@ -144,6 +146,7 @@ class SVGMacawView: MacawView {
                 let nodeTextEnd = self.node.nodeBy(tag: stationCaption.first!)
 
                 self.findPath()
+                self.fromRealmObject()
             } else if typeNode == Text.self {
                 let labelStation = nodeShape as! Text
                 labelStation.fill = Color.green
