@@ -3,17 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6DD2E7B1982E5FD546DC5602 /* Pods_metro_maps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */; };
 		B7F1640B254D713E00008FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1640A254D713E00008FBB /* AppDelegate.swift */; };
 		B7F1640D254D713E00008FBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1640C254D713E00008FBB /* SceneDelegate.swift */; };
-		B7F1640F254D713E00008FBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1640E254D713E00008FBB /* ViewController.swift */; };
 		B7F16412254D713E00008FBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F16410254D713E00008FBB /* Main.storyboard */; };
 		B7F16414254D713F00008FBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F16413254D713F00008FBB /* Assets.xcassets */; };
 		B7F16417254D713F00008FBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F16415254D713F00008FBB /* LaunchScreen.storyboard */; };
+		B7FD57C4254D9D7600A31385 /* MainMetroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57C3254D9D7600A31385 /* MainMetroViewController.swift */; };
+		B7FD57C7254D9DF400A31385 /* helper_NodeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57C6254D9DF400A31385 /* helper_NodeName.swift */; };
+		B7FD57CC254D9F1200A31385 /* SVGLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57CB254D9F1200A31385 /* SVGLayoutController.swift */; };
+		B7FD57D5254D9FD600A31385 /* ScrollViewControllerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57D4254D9FD600A31385 /* ScrollViewControllerLayout.swift */; };
+		B7FD57D8254DA06A00A31385 /* ViewDrawSvgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57D7254DA06A00A31385 /* ViewDrawSvgController.swift */; };
+		B7FD57DC254DA0C300A31385 /* ComputedRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57DB254DA0C300A31385 /* ComputedRoute.swift */; };
+		B7FD57DF254DA26400A31385 /* mt_hack_2020.svg in Resources */ = {isa = PBXBuildFile; fileRef = B7FD57DE254DA26400A31385 /* mt_hack_2020.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +28,17 @@
 		B7F16407254D713E00008FBB /* metro_maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = metro_maps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F1640A254D713E00008FBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F1640C254D713E00008FBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7F1640E254D713E00008FBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7F16411254D713E00008FBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7F16413254D713F00008FBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F16416254D713F00008FBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F16418254D713F00008FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7FD57C3254D9D7600A31385 /* MainMetroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMetroViewController.swift; sourceTree = "<group>"; };
+		B7FD57C6254D9DF400A31385 /* helper_NodeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper_NodeName.swift; sourceTree = "<group>"; };
+		B7FD57CB254D9F1200A31385 /* SVGLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGLayoutController.swift; sourceTree = "<group>"; };
+		B7FD57D4254D9FD600A31385 /* ScrollViewControllerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewControllerLayout.swift; sourceTree = "<group>"; };
+		B7FD57D7254DA06A00A31385 /* ViewDrawSvgController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDrawSvgController.swift; sourceTree = "<group>"; };
+		B7FD57DB254DA0C300A31385 /* ComputedRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputedRoute.swift; sourceTree = "<group>"; };
+		B7FD57DE254DA26400A31385 /* mt_hack_2020.svg */ = {isa = PBXFileReference; lastKnownFileType = file; path = mt_hack_2020.svg; sourceTree = SOURCE_ROOT; };
 		E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +60,6 @@
 				5B138DD9F899F2DBE4E2E5DC /* Pods-metro_maps.debug.xcconfig */,
 				4CF18353136075DBF312E34E /* Pods-metro_maps.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +84,85 @@
 		B7F16409254D713E00008FBB /* metro_maps */ = {
 			isa = PBXGroup;
 			children = (
-				B7F1640A254D713E00008FBB /* AppDelegate.swift */,
-				B7F1640C254D713E00008FBB /* SceneDelegate.swift */,
-				B7F1640E254D713E00008FBB /* ViewController.swift */,
-				B7F16410254D713E00008FBB /* Main.storyboard */,
+				B7FD57DE254DA26400A31385 /* mt_hack_2020.svg */,
+				B7FD57B9254D9C5200A31385 /* Application */,
 				B7F16413254D713F00008FBB /* Assets.xcassets */,
 				B7F16415254D713F00008FBB /* LaunchScreen.storyboard */,
 				B7F16418254D713F00008FBB /* Info.plist */,
 			);
 			path = metro_maps;
+			sourceTree = "<group>";
+		};
+		B7FD57B9254D9C5200A31385 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD57DA254DA0A300A31385 /* RouteFindClass */,
+				B7FD57CF254D9F7B00A31385 /* ScrollViewLayoutController */,
+				B7FD57C9254D9EED00A31385 /* LayoutSVGController */,
+				B7FD57BD254D9C6900A31385 /* Controller */,
+				B7FD57BB254D9C6300A31385 /* Model */,
+				B7FD57BA254D9C5E00A31385 /* View */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B7FD57BA254D9C5E00A31385 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7F16410254D713E00008FBB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7FD57BB254D9C6300A31385 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7F1640A254D713E00008FBB /* AppDelegate.swift */,
+				B7F1640C254D713E00008FBB /* SceneDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7FD57BD254D9C6900A31385 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD57C3254D9D7600A31385 /* MainMetroViewController.swift */,
+				B7FD57C6254D9DF400A31385 /* helper_NodeName.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B7FD57C9254D9EED00A31385 /* LayoutSVGController */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD57CA254D9EF900A31385 /* ViewController */,
+			);
+			path = LayoutSVGController;
+			sourceTree = "<group>";
+		};
+		B7FD57CA254D9EF900A31385 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD57CB254D9F1200A31385 /* SVGLayoutController.swift */,
+				B7FD57D7254DA06A00A31385 /* ViewDrawSvgController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B7FD57CF254D9F7B00A31385 /* ScrollViewLayoutController */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD57D4254D9FD600A31385 /* ScrollViewControllerLayout.swift */,
+			);
+			path = ScrollViewLayoutController;
+			sourceTree = "<group>";
+		};
+		B7FD57DA254DA0A300A31385 /* RouteFindClass */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD57DB254DA0C300A31385 /* ComputedRoute.swift */,
+			);
+			path = RouteFindClass;
 			sourceTree = "<group>";
 		};
 		E3D873DCDAD9393DA165A28D /* Frameworks */ = {
@@ -151,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FD57DF254DA26400A31385 /* mt_hack_2020.svg in Resources */,
 				B7F16417254D713F00008FBB /* LaunchScreen.storyboard in Resources */,
 				B7F16414254D713F00008FBB /* Assets.xcassets in Resources */,
 				B7F16412254D713E00008FBB /* Main.storyboard in Resources */,
@@ -206,9 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7F1640F254D713E00008FBB /* ViewController.swift in Sources */,
+				B7FD57D5254D9FD600A31385 /* ScrollViewControllerLayout.swift in Sources */,
 				B7F1640B254D713E00008FBB /* AppDelegate.swift in Sources */,
+				B7FD57CC254D9F1200A31385 /* SVGLayoutController.swift in Sources */,
+				B7FD57C4254D9D7600A31385 /* MainMetroViewController.swift in Sources */,
+				B7FD57C7254D9DF400A31385 /* helper_NodeName.swift in Sources */,
 				B7F1640D254D713E00008FBB /* SceneDelegate.swift in Sources */,
+				B7FD57DC254DA0C300A31385 /* ComputedRoute.swift in Sources */,
+				B7FD57D8254DA06A00A31385 /* ViewDrawSvgController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
