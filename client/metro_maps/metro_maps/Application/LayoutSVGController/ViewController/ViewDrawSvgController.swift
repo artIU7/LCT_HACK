@@ -65,11 +65,14 @@ class SVGMacawView: MacawView {
                         enumerate(indexer: xml, level: 0)
                         pathRoute = pathRoute.map({"station-path-"+$0})
                         print("route :\(pathRoute)")
-                       // pathArray = pathArray.filter ({
-                       //     $0 == pathRoute.first ||
-                        //    $0 == pathRoute.last ||
-                         //   $0 == stationCaption.first || $0 == stationNode.last
-                         //   })
+                        pathArray = ["station-transition-91e22b18-471a-11e5-8a1a-862c0e9ff412_91164b88-471a-11e5-a539-9c44d7e6d60c",
+                                     "",
+                                     "",
+                                     "",
+                        ]
+                        pathArray = pathArray.filter ({
+                         //  $0 == "station-transition-900b8078-471a-11e5-a4cb-96905f9ce89c_91164b88-471a-11e5-a539-9c44d7e6d60c"
+                          //  })//
                         var firstArray = [String]()
                         var secondArray = [String]()
                         var thirdyArray = [String]()
@@ -141,7 +144,7 @@ class SVGMacawView: MacawView {
     }
     
     private func registerForSelection(nodeTag : String) {
-        self.node.nodeBy(tag: nodeTag)?.onTouchPressed({ (touch) in
+        self.node.nodeBy(tag: nodeTag)?.onTouchPressed({ [self] (touch) in
             self.addStationID()
             self.addLinkPath()
             
@@ -177,22 +180,34 @@ class SVGMacawView: MacawView {
                    // nodeStationCaption.fill = Color.green
                     
                 }
+                var newPath = [String]()
                 for i in 0...stationShow.count - 1 {
-                    for j in 0...linkPath.count - 1 {
                         if i != 8 {
-                            if linkPath[j] == stationShow[i] + stationShow[i + 1] {
-                                
-                                let stationPath = self.node.nodeBy(tag: "station-path-"+linkPath[j])
-                                let nodeStation = stationPath as! Shape
-                                nodeStation.fill = Color.blue
+                            if newPath.isEmpty {
+                                newPath = pathArray.filter({$0 == "station-path-" + stationShow[i] + "_" + stationShow[i + 1] ||
+                                    $0 == stationShow[i+1] + "_" + stationShow[i]
+                                })
+                            } else {
+                                newPath += pathArray.filter({$0 == "station-path-" + stationShow[i] + "_" + stationShow[i + 1] ||
+                                    $0 == stationShow[i+1] + "_" + stationShow[i]
+                                })
                             }
-                        }
                     }
+                }
+                print("find path :\(newPath)")
+                for inPath in newPath {
+                        let stationPath = self.node.nodeBy(tag: inPath)
+                        let nodeStation = stationPath as! Shape
+                        nodeStation.fill = Color.blue
                 }
                 self.fromRealmObject()
             } else if typeNode == Text.self {
                 let labelStation = nodeShape as! Text
                 labelStation.fill = Color.green
+            } else if typeNode == Group.self {
+                let grad = nodeShape as! Group
+                let f = grad.contents.first as! Shape//.fill = Color.aliceBlue
+                f.fill = Color.blue
             }
             //nodeSelect.fill = Color.blue
             self.delegate?.getId(id: nodeTag)
