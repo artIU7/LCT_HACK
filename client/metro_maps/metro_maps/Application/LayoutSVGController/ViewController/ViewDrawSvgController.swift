@@ -65,12 +65,25 @@ class SVGMacawView: MacawView {
                         enumerate(indexer: xml, level: 0)
                         pathRoute = pathRoute.map({"station-path-"+$0})
                         print("route :\(pathRoute)")
-                        pathArray = ["station-transition-91e22b18-471a-11e5-8a1a-862c0e9ff412_91164b88-471a-11e5-a539-9c44d7e6d60c",
-                                     "",
-                                     "",
-                                     "",
+                        pathArray = [
+                            "station-path-8fe7734a-471a-11e5-9691-a305092d2f10_8fe15b9a-471a-11e5-93b1-e840e2132458",
+                            "station-path-8fed8b7c-471a-11e5-a38f-9cc779261834_8fe7734a-471a-11e5-9691-a305092d2f10",
+                            "station-path-8ff35ef8-471a-11e5-b58f-d9873b2d97a0_8fed8b7c-471a-11e5-a38f-9cc779261834",
+                            "station-path-8ff9552e-471a-11e5-aa10-d33191d3c698_8ff35ef8-471a-11e5-b58f-d9873b2d97a0",
+                            "station-path-8fff2b84-471a-11e5-87fe-24f90d40a37c_8ff9552e-471a-11e5-aa10-d33191d3c698",
+                            "station-path-9005523e-471a-11e5-a6b5-066cb81ffc1a_8fff2b84-471a-11e5-87fe-24f90d40a37c",
+                            "station-path-900b8078-471a-11e5-a4cb-96905f9ce89c_9005523e-471a-11e5-a6b5-066cb81ffc1a",
+                            "station-transition-900b8078-471a-11e5-a4cb-96905f9ce89c_91164b88-471a-11e5-a539-9c44d7e6d60c",
+                            "station-transition-91e22b18-471a-11e5-8a1a-862c0e9ff412_91164b88-471a-11e5-a539-9c44d7e6d60c",
+                            "station-path-91e22b18-471a-11e5-8a1a-862c0e9ff412_91e78cac-471a-11e5-9b34-ea1fe7e22ce3",
+                            "station-transition-91e78cac-471a-11e5-9b34-ea1fe7e22ce3_8d7c4306-471a-11e5-ac4c-d3205eae3d5c",
+                            "station-path-8d7c4306-471a-11e5-ac4c-d3205eae3d5c_8d75e060-471a-11e5-9c8f-ed332b49875f",
+                            "station-path-8d75e060-471a-11e5-9c8f-ed332b49875f_8d6f270c-471a-11e5-bda5-c0cbff6061ac",
+                            "station-path-8d6f270c-471a-11e5-bda5-c0cbff6061ac_8d689310-471a-11e5-addd-7951056f7282",
+                            "station-path-8d689310-471a-11e5-addd-7951056f7282_8d623c5e-471a-11e5-ab6e-fb7263b9cb1c",
+                            "station-path-8d623c5e-471a-11e5-ab6e-fb7263b9cb1c_8d58b80a-471a-11e5-9cc3-1a839c21e9f2"
                         ]
-                        pathArray = pathArray.filter ({
+       //                 pathArray = pathArray.filter ({
                          //  $0 == "station-transition-900b8078-471a-11e5-a4cb-96905f9ce89c_91164b88-471a-11e5-a539-9c44d7e6d60c"
                           //  })//
                         var firstArray = [String]()
@@ -162,7 +175,10 @@ class SVGMacawView: MacawView {
                     routeWP[0] = "Перов"
                 }
                 nodeSelectGroup.opacity = 0.7
-                nodeSelectGroup.fill = Color.orange
+                nodeSelectGroup.fill = Color.green
+                NotificationCenter.default.post(name: NSNotification.Name("setPosition"), object: nil)
+                startPointDelegate = "Новогиреево"
+                print(nodeSelectGroup.bounds)
                 let nodeTextStart = self.node.nodeBy(tag: stationCaption.last!)
                 let nodeTextEnd = self.node.nodeBy(tag: stationCaption.first!)
                 let nodeTextStartT = nodeTextStart as! Text
@@ -181,7 +197,7 @@ class SVGMacawView: MacawView {
                     
                 }
                 var newPath = [String]()
-                for i in 0...stationShow.count - 1 {
+                /*for i in 0...stationShow.count - 1 {
                         if i != 8 {
                             if newPath.isEmpty {
                                 newPath = pathArray.filter({$0 == "station-path-" + stationShow[i] + "_" + stationShow[i + 1] ||
@@ -193,7 +209,7 @@ class SVGMacawView: MacawView {
                                 })
                             }
                     }
-                }
+                } */
                 print("find path :\(newPath)")
                 for inPath in newPath {
                         let stationPath = self.node.nodeBy(tag: inPath)
