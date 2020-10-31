@@ -18,24 +18,7 @@ class MainMetroViewController: UIViewController {
     @IBOutlet weak var toField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         bottomView.isHidden = !statusSubView
-        
-        let button = UIButton(frame: CGRect(x: 100,
-                                                    y: 100,
-                                                    width: 200,
-                                                    height: 60))
-                button.setTitle("Test",
-                                for: .normal)
-                button.setTitleColor(.systemBlue,
-                                     for: .normal)
-                
-                button.addTarget(self,
-                                 action: #selector(buttonAction),
-                                 for: .touchUpInside)
-                
-                self.view.addSubview(button)
-        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(subView),
                                                name: NSNotification.Name("addSubView"),
@@ -81,7 +64,7 @@ class MainMetroViewController: UIViewController {
             ModelStation(
             id : "8d840dfc-471a-11e5-b4e2-0a84b4bb2568",nameStation : "Марксистская",lineID : "8d4a6c28-471a-11e5-ba91-961782854ada"),
             ModelStation(
-                id : "911cd200-471a-11e5-8c31-23afc3f737bc",nameStation : "Таганская",lineID : "90cc019a-471a-11e5-a77d-4d1a70b68fca")
+            id : "911cd200-471a-11e5-8c31-23afc3f737bc",nameStation : "Таганская",lineID : "90cc019a-471a-11e5-a77d-4d1a70b68fca")
         ]
             
         
@@ -124,18 +107,17 @@ class MainMetroViewController: UIViewController {
     @objc func subView() {
         bottomView.isHidden = false//!statusSubView
     }
-
-    @objc func buttonAction() {
-          print("Button pressed")
-      }
     @IBAction func fromStation(_ sender: Any) {
         fromField.text = bufferSelected
+        NotificationCenter.default.post(name: NSNotification.Name("selectPoint"), object: nil)
     }
     
     @IBAction func toStation(_ sender: Any) {
         toField.text = bufferSelected
         NotificationCenter.default.post(name: NSNotification.Name("routeBuild"), object: nil)
+        
         bottomView.isHidden = true
+        statusIndex = true
     }
     // MARK: - Navigation
 
