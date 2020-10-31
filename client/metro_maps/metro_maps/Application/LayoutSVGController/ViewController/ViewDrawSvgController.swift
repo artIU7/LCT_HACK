@@ -10,6 +10,7 @@ import Macaw
 import SWXMLHash
 import RealmSwift
 
+var routeWP = [String]()
 var stationID = [String]()
 var nodeStation = [MyNode]()
 var linkPath = [String]()
@@ -29,7 +30,17 @@ class SVGMacawView: MacawView {
         self.backgroundColor = backGroundColor//.black
         var stn = [
             "8d623c5e-471a-11e5-ab6e-fb7263b9cb1c", // Новокосино - Новогиреево
-            "8d58b80a-471a-11e5-9cc3-1a839c21e9f2" //
+            "8d58b80a-471a-11e5-9cc3-1a839c21e9f2", //
+
+            "8d689310-471a-11e5-addd-7951056f7282",// Перово
+                         "8d6f270c-471a-11e5-bda5-c0cbff6061ac", // Шоссе Энтузиастов
+                         "8d75e060-471a-11e5-9c8f-ed332b49875f", // Авиамоторная
+                         "8d7c4306-471a-11e5-ac4c-d3205eae3d5c", // Площадь Ильича
+                         "91e78cac-471a-11e5-9b34-ea1fe7e22ce3", // Римская
+                         "91e22b18-471a-11e5-8a1a-862c0e9ff412", // Чкаловская
+                         "91164b88-471a-11e5-a539-9c44d7e6d60c", // Курская
+                         "8d840dfc-471a-11e5-b4e2-0a84b4bb2568", // Марксистская
+                         "911cd200-471a-11e5-8c31-23afc3f737bc",
         ]
         var pathRoute = [String]()
         let link = true
@@ -97,7 +108,7 @@ class SVGMacawView: MacawView {
                             }
                          
                         }
-                        pathArray = firstArray+secondArray+thirdyArray
+                       // pathArray = firstArray+secondArray+thirdyArray
                     
                         print(pathArray)
                         for case let element in pathArray {
@@ -140,12 +151,44 @@ class SVGMacawView: MacawView {
             let typeNode = type(of: nodeShape!)
             if typeNode == Shape.self {
                 let nodeSelectGroup = nodeShape as! Shape
+                if routeWP.isEmpty {
+                    routeWP.append("Новокосино")
+                } else if routeWP.count == 1 {
+                    routeWP.append("Новогиреево")
+                } else {
+                    routeWP[0] = "Перов"
+                }
                 nodeSelectGroup.opacity = 0.7
-                nodeSelectGroup.fill = Color.gray
+                nodeSelectGroup.fill = Color.orange
                 let nodeTextStart = self.node.nodeBy(tag: stationCaption.last!)
                 let nodeTextEnd = self.node.nodeBy(tag: stationCaption.first!)
-
-                self.findPath()
+                let nodeTextStartT = nodeTextStart as! Text
+                nodeTextStartT.fill = Color.green
+                let nodeTextEndT = nodeTextEnd as! Text
+                nodeTextEndT.fill = Color.green
+                let stationShow = self.findPath()
+                for statiom in stationShow {
+                    let stationPath = self.node.nodeBy(tag: "station-"+statiom)
+                    let nodeStation = stationPath as! Shape
+                    nodeStation.fill = Color.red
+                    
+                    let stationPathCaption = self.node.nodeBy(tag: "station-caption-"+statiom)
+                   // let nodeStationCaption = stationPathCaption as! Text
+                   // nodeStationCaption.fill = Color.green
+                    
+                }
+                for i in 0...stationShow.count - 1 {
+                    for j in 0...linkPath.count - 1 {
+                        if i != 8 {
+                            if linkPath[j] == stationShow[i] + stationShow[i + 1] {
+                                
+                                let stationPath = self.node.nodeBy(tag: "station-path-"+linkPath[j])
+                                let nodeStation = stationPath as! Shape
+                                nodeStation.fill = Color.blue
+                            }
+                        }
+                    }
+                }
                 self.fromRealmObject()
             } else if typeNode == Text.self {
                 let labelStation = nodeShape as! Text
@@ -188,7 +231,7 @@ class SVGMacawView: MacawView {
             "91164b88-471a-11e5-a539-9c44d7e6d60c_911cd200-471a-11e5-8c31-23afc3f737bc", // Таганская- Курская
         ]
     }
-    func findPath() {
+    func findPath() -> [String] {
         stationID.map({
             nodeStation.append(MyNode(name: $0))
         })
@@ -205,29 +248,19 @@ class SVGMacawView: MacawView {
                 }
             }
         }
-        /*
-        let nodeA = MyNode(name: "A")
-        let nodeB = MyNode(name: "B")
-        let nodeC = MyNode(name: "C")
-        let nodeD = MyNode(name: "D")
-        let nodeE = MyNode(name: "E")
-
-        nodeA.connections.append(Connection(to: nodeB, weight: 1))
-        nodeB.connections.append(Connection(to: nodeC, weight: 3))
-        nodeC.connections.append(Connection(to: nodeD, weight: 1))
-        nodeB.connections.append(Connection(to: nodeE, weight: 1))
-        nodeE.connections.append(Connection(to: nodeC, weight: 1))*/
-
         let sourceNode = nodeStation[0]
-        let destinationNode = nodeStation[10]
+        let destinationNode = nodeStation[8]
 
         var path = shortestPath(source: sourceNode, destination: destinationNode)
 
         if let succession: [String] = path?.array.reversed().flatMap({ $0 as? MyNode}).map({$0.name}) {
           print("Путь : \(succession)")
+            return succession
+
         } else {
           print("Нет связи\(sourceNode.name) & \(destinationNode.name)")
         }
+        return []
     }
     
     

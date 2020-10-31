@@ -9,7 +9,9 @@ import UIKit
 import RealmSwift
 
 class MainMetroViewController: UIViewController {
+    @IBOutlet weak var startPoint: UILabel!
     var stationID  : Results<ModelStation>!
+    @IBOutlet weak var endPoint: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
