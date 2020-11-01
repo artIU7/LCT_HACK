@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import RealmSwift
+
+var stations = [StationExit]()
 
 func fetch_mosdata_api() {
     let urlString = "https://apidata.mos.ru/v1/datasets/624/features?api_key=5e31d338226d8ac7a2efcf08320f3fea"
@@ -28,17 +31,17 @@ func fetch_mosdata_api() {
                   let properties = respone["properties"] as! [String:Any]
                   let attribute = properties["Attributes"] as! [String:Any]
                   
-                    let nameStation = attribute["NameOfStation"]
-                    let eventStation = attribute["ModeOnEvenDays"]
-                    let nameExitStation = attribute["Name"]
-                    let lattitudeExit = attribute["Latitude_WGS84"]
-                    let longitudeExit = attribute["Longitude_WGS84"]
-                  
-                    RealmService.shared.createStation(ModelStationExit(nameStation: nameStation,
-                                                                       nameExitStation: eventStation,
-                                                                       eventStation: nameExitStation,
-                                                                       lattitude: lattitudeExit,
-                                                                       longitude: longitudeExit))
+                    let nameStation = attribute["NameOfStation"] as! String
+                    let eventStation = attribute["ModeOnEvenDays"] as! String
+                    let nameExitStation = attribute["Name"] as! String
+                    let lattitudeExit = attribute["Latitude_WGS84"] as! Double
+                    let longitudeExit = attribute["Longitude_WGS84"] as! Double
+                    let station = StationExit(nameStation: nameStation,
+                                              nameExitStation: nameExitStation,
+                                              eventStation: eventStation,
+                                              lattitude: lattitudeExit,
+                                              longitude: longitudeExit)
+                    stations.append(station)
                 }
             } catch {
                 print(error)

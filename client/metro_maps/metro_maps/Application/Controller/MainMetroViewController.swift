@@ -165,6 +165,16 @@ class MainMetroViewController: UIViewController {
         var mosdata = try! Realm().objects(ModelStationExit.self)
         if mosdata.isEmpty {
         fetch_mosdata_api()
+        
+            stations.map({
+                var eventExit = ModelStationExit(nameStation: $0.nameStation,
+                            nameExitStation: $0.nameExitStation,
+                            eventStation: $0.eventStation,
+                            lattitude: $0.lattitude,
+                            longitude: $0.longitude)
+                
+                RealmService.shared.createStation(eventExit)
+            })
         }
     }
     // MARK: - Navigation
