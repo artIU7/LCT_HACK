@@ -10,6 +10,7 @@ import Macaw
 import SWXMLHash
 import RealmSwift
 //
+var alternative = ""
 var startPoint = String()
 var endPoint = String()
 var statusIndex = false
@@ -134,6 +135,8 @@ class SVGMacawView: MacawView {
                    (elemnet.staionIDStart == stationShow[i + 1] ||
                    elemnet.staionIDStart == stationShow[i])
                     {
+                    print(elemnet.id)
+                    
                     let stationPath = self.node.nodeBy(tag: elemnet.id)
                     let typeNode = type(of: stationPath!)
                     if typeNode == Shape.self {
@@ -211,6 +214,7 @@ class SVGMacawView: MacawView {
  
     func initGraph() {
         let stationRealm = try! Realm().objects(ModelStation.self)
+        print(stationRealm)
         var pathRealm = try! Realm().objects(ModelPath.self)
         print("init ::: \(stationRealm)")
         print("init ::: \(pathRealm)")
@@ -220,12 +224,22 @@ class SVGMacawView: MacawView {
         for i in 0...nodeStation.count - 1 {
             for j in 0...nodeStation.count - 1 {
                 for path in pathRealm {
-                    if path.id == "station-path-" + nodeStation[i].name + "_" + nodeStation[j].name ||
-                    path.id == "station-transition-" + nodeStation[i].name + "_" + nodeStation[j].name
-                        {
-                        print("connection - true")
-                        nodeStation[i].connections.append(Connection(to: nodeStation[j], weight: 3 + i + j))
-                        nodeStation[j].connections.append(Connection(to: nodeStation[i], weight: 3 + i + j))
+                    if path.id != alternative   {
+                        if path.id == "station-path-" + nodeStation[i].name + "_" + nodeStation[j].name ||
+                        path.id == "station-transition-" + nodeStation[i].name + "_" + nodeStation[j].name
+                            {
+                            print("connection - true")
+                            nodeStation[i].connections.append(Connection(to: nodeStation[j], weight: 3 + i + j))
+                            nodeStation[j].connections.append(Connection(to: nodeStation[i], weight: 3 + i + j))
+                        }
+                    } else if path.id != "" {
+                        if path.id == "station-path-" + nodeStation[i].name + "_" + nodeStation[j].name ||
+                        path.id == "station-transition-" + nodeStation[i].name + "_" + nodeStation[j].name
+                            {
+                            print("connection - true")
+                            nodeStation[i].connections.append(Connection(to: nodeStation[j], weight: 10000))
+                            nodeStation[j].connections.append(Connection(to: nodeStation[i], weight: 10000))
+                        }
                     }
                 }
             }

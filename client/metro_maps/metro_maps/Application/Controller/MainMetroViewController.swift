@@ -20,6 +20,7 @@ class MainMetroViewController: UIViewController {
     @IBOutlet weak var toField: UITextField!
     @IBOutlet weak var timePath: UILabel!
     @IBOutlet weak var DetailView: MaterialView!
+    @IBOutlet weak var switchRoute: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         timePath.isHidden = true
@@ -91,7 +92,12 @@ class MainMetroViewController: UIViewController {
             ModelPath(id:"station-path-8d689310-471a-11e5-addd-7951056f7282_8d623c5e-471a-11e5-ab6e-fb7263b9cb1c", staionIDStart: "8d689310-471a-11e5-addd-7951056f7282", staionIDEnd: "8d623c5e-471a-11e5-ab6e-fb7263b9cb1c"),
             ModelPath(id:"station-path-8d623c5e-471a-11e5-ab6e-fb7263b9cb1c_8d58b80a-471a-11e5-9cc3-1a839c21e9f2", staionIDStart: "8d623c5e-471a-11e5-ab6e-fb7263b9cb1c", staionIDEnd: "8d58b80a-471a-11e5-9cc3-1a839c21e9f2"),
             ModelPath(id:"station-transition-8d840dfc-471a-11e5-b4e2-0a84b4bb2568_911cd200-471a-11e5-8c31-23afc3f737bc", staionIDStart: "911cd200-471a-11e5-8c31-23afc3f737bc", staionIDEnd: "8d840dfc-471a-11e5-b4e2-0a84b4bb2568"),
-            ModelPath(id:"station-path-91164b88-471a-11e5-a539-9c44d7e6d60c_911cd200-471a-11e5-8c31-23afc3f737bc", staionIDStart: "911cd200-471a-11e5-8c31-23afc3f737bc", staionIDEnd: "91164b88-471a-11e5-a539-9c44d7e6d60c")]
+            ModelPath(id:"station-path-91164b88-471a-11e5-a539-9c44d7e6d60c_911cd200-471a-11e5-8c31-23afc3f737bc", staionIDStart: "911cd200-471a-11e5-8c31-23afc3f737bc", staionIDEnd: "91164b88-471a-11e5-a539-9c44d7e6d60c"),
+            ModelPath(id:"station-path-8d840dfc-471a-11e5-b4e2-0a84b4bb2568_8d7c4306-471a-11e5-ac4c-d3205eae3d5c", staionIDStart: "8d7c4306-471a-11e5-ac4c-d3205eae3d5c", staionIDEnd: "8d840dfc-471a-11e5-b4e2-0a84b4bb2568")]
+
+ 
+        
+        
         var nameStation = [
             ModelStationName(id: "8fe15b9a-471a-11e5-93b1-e840e2132458", nameStation: "Щёлковская"),
             ModelStationName(id: "8fe7734a-471a-11e5-9691-a305092d2f10", nameStation: "Первомайская"),
@@ -143,9 +149,22 @@ class MainMetroViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name("selectPoint"), object: nil)
     }
     
+    @IBAction func changeRoute(_ sender: Any) {
+        switch switchRoute.selectedSegmentIndex
+           {
+           case 0:
+            alternative = ""
+            NotificationCenter.default.post(name: NSNotification.Name("routeBuild"), object: nil)
+           case 1:
+            alternative = "station-transition-91e78cac-471a-11e5-9b34-ea1fe7e22ce3_8d7c4306-471a-11e5-ac4c-d3205eae3d5c"
+            NotificationCenter.default.post(name: NSNotification.Name("routeBuild"), object: nil)
+           default:
+               break
+           }
+    }
     @IBAction func toStation(_ sender: Any) {
         toField.text = endPoint
-
+     
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [self] in
             timePath.isHidden = false
             let min = 10

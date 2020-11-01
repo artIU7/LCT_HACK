@@ -12,7 +12,7 @@ extension SceneARController {
 
 func billboardnew(_ position : SCNVector3, value : String) {
           let material = SCNMaterial()
-          let textGeometry = SCNText(string: "Маршрут до " + " " + value, extrusionDepth: 0.5)
+          let textGeometry = SCNText(string: "Маршрут до остановки " + " " + value, extrusionDepth: 0.5)
           textGeometry.font = UIFont(name: "Arial", size: 2)
           textGeometry.firstMaterial!.diffuse.contents = UIColor.white
           let textNode = SCNNode(geometry: textGeometry)

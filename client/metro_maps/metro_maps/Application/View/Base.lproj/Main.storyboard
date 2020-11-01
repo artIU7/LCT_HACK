@@ -229,10 +229,14 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jlj-2f-0lc">
                                 <rect key="frame" x="67" y="36" width="240" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="Маршрут"/>
                                     <segment title="Альтернативный"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeRoute:" destination="BYZ-38-t0r" eventType="valueChanged" id="rDr-je-6c4"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wc-b7-D75">
                                 <rect key="frame" x="16" y="34" width="37" height="35"/>
@@ -249,6 +253,7 @@
                     <connections>
                         <outlet property="bottomView" destination="WKT-5O-Fdk" id="Ldb-9v-tsY"/>
                         <outlet property="fromField" destination="pKR-hC-mee" id="3zs-3C-DDn"/>
+                        <outlet property="switchRoute" destination="jlj-2f-0lc" id="wtf-92-vAf"/>
                         <outlet property="timePath" destination="0cM-mW-vpS" id="Pux-v5-mTq"/>
                         <outlet property="toField" destination="PEF-iJ-wDZ" id="rxa-VK-qQj"/>
                     </connections>
