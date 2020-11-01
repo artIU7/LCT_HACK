@@ -11,6 +11,8 @@ import RealmSwift
 var statusSubView = false
 
 var bufferSelected = ""
+let indicator = UIImage(named: "indicator.png")
+let station = UIImage(named: "station.png")
 class MainMetroViewController: UIViewController {
     @IBOutlet weak var bottomView: MaterialView!
     var stationID  : Results<ModelStation>!

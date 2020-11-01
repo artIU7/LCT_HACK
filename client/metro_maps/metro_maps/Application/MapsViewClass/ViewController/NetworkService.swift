@@ -48,3 +48,22 @@ func fetch_mosdata_api() {
             }
         }.resume()
     }
+    func loadArea() {
+        let urlString = "https://.herokuapp.com//"
+           if let url = URL(string: urlString) {
+               if let data = try? Data(contentsOf: url) {
+              do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
+                    // try to read out a string array
+                    print(json)
+                    for each in json {
+                        let obj = each["locate"] as! NSArray
+                       
+                        }
+                    }
+                } catch let error as NSError {
+                    print("Failed to load: \(error.localizedDescription)")
+                }
+            }
+    }
+}

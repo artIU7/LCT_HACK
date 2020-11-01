@@ -30,8 +30,8 @@
             filePath = "metro_maps/Application/Controller/MainMetroViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "subView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -301,8 +301,8 @@
             filePath = "metro_maps/Application/Controller/MainMetroViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "loadData(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -317,8 +317,8 @@
             filePath = "metro_maps/Application/Controller/MainMetroViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "loadData(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -359,7 +359,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "97578835-8E62-4E1F-A10A-244E5D791D86"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "metro_maps/Application/MapsViewClass/ViewController/NetworkService.swift"

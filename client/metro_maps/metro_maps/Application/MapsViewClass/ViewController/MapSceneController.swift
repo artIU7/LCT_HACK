@@ -63,6 +63,14 @@ class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataS
          super.viewDidDisappear(animated)
          progress?.cancel()
      }
+    func addMarkerStation(_ positionAnchor : NMAGeoCoordinates, index : Int, markerUI : UIImage) {
+        let marker = NMAMapMarker(geoCoordinates: positionAnchor, image: markerUI)
+          marker.resetIconSize()
+          marker.setSize(CGSize(width: 1, height: 1), forZoomRange: NSRange(location: 5,length: 20))
+          //markerAR["AR \(index)"] = marker
+          //infoMarker[marker.hashValue] = index
+          self.mapView.add(mapObject: marker)
+      }
     /*
     // MARK: - Navigation
 

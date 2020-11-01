@@ -25,6 +25,8 @@ extension MapSceneController  {
         }
         tempPositin = lastLocation.coordinate
         mapView.set(geoCenter: NMAGeoCoordinates(latitude: tempPositin.latitude, longitude: tempPositin.longitude), animation: .linear)
+        
+        addMarkerStation(NMAGeoCoordinates(latitude: tempPositin.latitude, longitude: tempPositin.longitude), index: 0, markerUI: indicator!)
         stopLocation()
     }
     // MARK 3
