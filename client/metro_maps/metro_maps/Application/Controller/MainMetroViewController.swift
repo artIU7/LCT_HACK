@@ -158,6 +158,9 @@ class MainMetroViewController: UIViewController {
     @IBAction func viewDetail(_ sender: Any) {
     }
     
+    @IBAction func hideBottomView(_ sender: Any) {
+        bottomView.isHidden = true
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
