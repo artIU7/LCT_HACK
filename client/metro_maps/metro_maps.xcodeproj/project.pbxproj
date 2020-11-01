@@ -27,6 +27,8 @@
 		B7FD581A254E469800A31385 /* MapSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5819254E469800A31385 /* MapSceneController.swift */; };
 		B7FD581D254E477F00A31385 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD581C254E477F00A31385 /* LocationManager.swift */; };
 		B7FD5821254E4A4100A31385 /* RouteBuild+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5820254E4A4100A31385 /* RouteBuild+Helper.swift */; };
+		B7FD5825254E4D0600A31385 /* CoreGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5824254E4D0600A31385 /* CoreGraphicsView.swift */; };
+		B7FD5830254E602800A31385 /* RealmTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD582F254E602700A31385 /* RealmTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		B7FD5819254E469800A31385 /* MapSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSceneController.swift; sourceTree = "<group>"; };
 		B7FD581C254E477F00A31385 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B7FD5820254E4A4100A31385 /* RouteBuild+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteBuild+Helper.swift"; sourceTree = "<group>"; };
+		B7FD5824254E4D0600A31385 /* CoreGraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsView.swift; sourceTree = "<group>"; };
+		B7FD582F254E602700A31385 /* RealmTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableView.swift; sourceTree = "<group>"; };
 		E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,7 @@
 		B7FD57B9254D9C5200A31385 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				B7FD5823254E4CE800A31385 /* CoreGraphicsView */,
 				B7FD5816254E465B00A31385 /* MapsViewClass */,
 				B7FD57E1254DA94400A31385 /* RealmMetroStation */,
 				B7FD57DA254DA0A300A31385 /* RouteFindClass */,
@@ -214,6 +219,7 @@
 			children = (
 				B7FD5819254E469800A31385 /* MapSceneController.swift */,
 				B7FD5820254E4A4100A31385 /* RouteBuild+Helper.swift */,
+				B7FD582F254E602700A31385 /* RealmTableView.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -224,6 +230,14 @@
 				B7FD581C254E477F00A31385 /* LocationManager.swift */,
 			);
 			path = "Helper+LocationManager";
+			sourceTree = "<group>";
+		};
+		B7FD5823254E4CE800A31385 /* CoreGraphicsView */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD5824254E4D0600A31385 /* CoreGraphicsView.swift */,
+			);
+			path = CoreGraphicsView;
 			sourceTree = "<group>";
 		};
 		E3D873DCDAD9393DA165A28D /* Frameworks */ = {
@@ -354,10 +368,12 @@
 				B7FD57D5254D9FD600A31385 /* ScrollViewControllerLayout.swift in Sources */,
 				B7F1640B254D713E00008FBB /* AppDelegate.swift in Sources */,
 				B7FD581A254E469800A31385 /* MapSceneController.swift in Sources */,
+				B7FD5830254E602800A31385 /* RealmTableView.swift in Sources */,
 				B7FD57CC254D9F1200A31385 /* SVGLayoutController.swift in Sources */,
 				B7FD5807254DDBCA00A31385 /* MaterialView.swift in Sources */,
 				B7FD57E4254DA97400A31385 /* ModelStation.swift in Sources */,
 				B7FD57C4254D9D7600A31385 /* MainMetroViewController.swift in Sources */,
+				B7FD5825254E4D0600A31385 /* CoreGraphicsView.swift in Sources */,
 				B7FD57C7254D9DF400A31385 /* helper_NodeName.swift in Sources */,
 				B7F1640D254D713E00008FBB /* SceneDelegate.swift in Sources */,
 				B7FD5821254E4A4100A31385 /* RouteBuild+Helper.swift in Sources */,

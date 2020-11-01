@@ -10,7 +10,27 @@ import NMAKit
 
 var tempPositin : CLLocationCoordinate2D!
 
-class MapSceneController: UIViewController {
+class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    private var data = ["Авиамоторная","Селигерская"]
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch tableView {
+          case self.tableView:
+             return self.data.count
+           default:
+             return 0
+          }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "RealmViewCell", for: indexPath) as! RealmViewCell
+           cell.textLabel?.text = self.data[indexPath.row]
+           return cell
+    }
+    
 
     @IBOutlet var mapView: NMAMapView!
     
@@ -21,15 +41,22 @@ class MapSceneController: UIViewController {
     var coreRouter: NMACoreRouter!
     var route = [NMAGeoCoordinates]()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         coreRouter = NMACoreRouter()
 
         self.mapView.mapScheme = NMAMapSchemeNormalNightTransit
         
         self.initLocationManager()
         self.startLocation()
+        
+        self.tableView.register(RealmViewCell.self, forCellReuseIdentifier: "RealmViewCell")
+
+        self.tableView.delegate = self
+        
+        self.tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
