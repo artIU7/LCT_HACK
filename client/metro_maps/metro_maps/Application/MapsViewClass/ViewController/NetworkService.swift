@@ -34,13 +34,13 @@ func fetch_mosdata_api() {
                     let nameStation = attribute["NameOfStation"] as! String
                     let eventStation = attribute["ModeOnEvenDays"] as! String
                     let nameExitStation = attribute["Name"] as! String
-                    let lattitudeExit = attribute["Latitude_WGS84"] as! Double
-                    let longitudeExit = attribute["Longitude_WGS84"] as! Double
+                    let lattitudeExit = attribute["Latitude_WGS84"] as! String
+                    let longitudeExit = attribute["Longitude_WGS84"] as! String
                     let station = StationExit(nameStation: nameStation,
                                               nameExitStation: nameExitStation,
                                               eventStation: eventStation,
-                                              lattitude: lattitudeExit,
-                                              longitude: longitudeExit)
+                                              lattitude: Double(lattitudeExit)!,
+                                              longitude: Double(longitudeExit)!)
                     stations.append(station)
                 }
             } catch {

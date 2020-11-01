@@ -7,11 +7,12 @@
 
 import UIKit
 import NMAKit
+import RealmSwift
 
 var tempPositin : CLLocationCoordinate2D!
 
 class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-    private var data = ["Авиамоторная","Селигерская"]
+    private var data = [""]
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -56,6 +57,21 @@ class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataS
         self.tableView.delegate = self
         
         self.tableView.dataSource = self
+        let eventStation = try! Realm().objects(ModelStationExit.self)
+        let stationInfo = eventStation.filter({
+                        $0.nameStation == startPoint}
+        )
+        var newElement = eventStation
+        for element in eventStation {
+            if element.nameStation == startPoint {
+                addMarkerStation(NMAGeoCoordinates(latitude: element.lattitude, longitude: element.longitude), index: 1, markerUI: station!)
+                mapView.set(geoCenter: NMAGeoCoordinates(latitude: element.lattitude, longitude: element.longitude), animation: .linear)
+                data.append(element.nameExitStation)
+                tableView.reloadData()
+            }
+        }
+        self.mapView.gestureDelegate = self
+        self.mapView.delegate = self
         // Do any additional setup after loading the view.
     }
     

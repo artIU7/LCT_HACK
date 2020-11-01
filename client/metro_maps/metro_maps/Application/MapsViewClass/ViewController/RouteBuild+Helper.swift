@@ -107,3 +107,8 @@ extension MapSceneController {
         return D
     }
 }
+extension MapSceneController {
+    func mapView(_ mapView: NMAMapView, didSelect objects: [NMAViewObject]) {
+        print("select :: object \(objects)")
+    }
+}

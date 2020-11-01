@@ -178,6 +178,7 @@ class MainMetroViewController: UIViewController {
                 RealmService.shared.createStation(eventExit)
             })
         }
+        
     }
     // MARK: - Navigation
 
