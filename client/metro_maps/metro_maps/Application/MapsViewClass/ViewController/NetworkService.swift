@@ -25,26 +25,21 @@ func fetch_mosdata_api() {
                 for element in feature {
          //           print(element)
                   let respone = element as! [String:Any]
-                  let geometry = respone["geometry"] as! [String:Any]
                   let properties = respone["properties"] as! [String:Any]
-                  print("preload : \(geometry)")
-                  print("properties : \(properties)")
+                  let attribute = properties["Attributes"] as! [String:Any]
+                  
+                    let nameStation = attribute["NameOfStation"]
+                    let eventStation = attribute["ModeOnEvenDays"]
+                    let nameExitStation = attribute["Name"]
+                    let lattitudeExit = attribute["Latitude_WGS84"]
+                    let longitudeExit = attribute["Longitude_WGS84"]
+                  
+                    RealmService.shared.createStation(ModelStationExit(nameStation: nameStation,
+                                                                       nameExitStation: eventStation,
+                                                                       eventStation: nameExitStation,
+                                                                       lattitude: lattitudeExit,
+                                                                       longitude: longitudeExit))
                 }
-            
-             //   for response in p {
-             //   print("select id")
-             //       guard let id = response["id"] /*as! Double*/ else {
-             //           return
-             //       }
-             //   print("select lat")
-             //       guard let lat = response["lat"] /*as! Double*/ else {
-             //                          return//
-             //       }
-             //   print("select lon")
-             //       guard let lon = response["lon"] /*as! Double*/ else {
-             //                      return
-             //       }
-            
             } catch {
                 print(error)
             }

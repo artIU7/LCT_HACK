@@ -162,7 +162,10 @@ class MainMetroViewController: UIViewController {
         bottomView.isHidden = true
     }
     @IBAction func loadData(_ sender: Any) {
+        var mosdata = try! Realm().objects(ModelStationExit.self)
+        if mosdata.isEmpty {
         fetch_mosdata_api()
+        }
     }
     // MARK: - Navigation
 

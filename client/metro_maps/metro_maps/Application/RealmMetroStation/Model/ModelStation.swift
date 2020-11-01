@@ -48,3 +48,19 @@ class ModelStationName: Object {
         self.nameStation = nameStation
     }
   }
+
+class ModelStationExit: Object {
+    @objc dynamic var nameStation = ""
+    @objc dynamic var nameExitStation = ""
+    @objc dynamic var eventStation = ""
+    @objc dynamic var lattitude = 0.0
+    @objc dynamic var longitude = 0.0
+    convenience init(nameStation: String,nameExitStation : String,eventStation: String,lattitude : Double, longitude : Double ) {
+        self.init()
+        self.nameStation = nameStation
+        self.nameExitStation = nameExitStation
+        self.eventStation = eventStation
+        self.lattitude = lattitude
+        self.longitude = longitude
+    }
+  }

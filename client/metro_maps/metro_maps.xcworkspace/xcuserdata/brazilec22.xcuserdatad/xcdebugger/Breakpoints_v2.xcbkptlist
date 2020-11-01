@@ -198,54 +198,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0B4ADF9D-9D53-49A4-BDDE-3A686CD292D6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "metro_maps/Application/MapsViewClass/ViewController/NetworkService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "fetch_mosdata_api()"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "0B4ADF9D-9D53-49A4-BDDE-3A686CD292D6 - fd914148baa272b0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in metro_maps.fetch_mosdata_api() -&gt; ()"
-                  moduleName = "metro_maps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/brazilec22/Documents/LCT_HACK/client/metro_maps/metro_maps/Application/MapsViewClass/ViewController/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "1084">
-               </Location>
-               <Location
-                  uuid = "0B4ADF9D-9D53-49A4-BDDE-3A686CD292D6 - fd914148baa272b0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in metro_maps.fetch_mosdata_api() -&gt; ()"
-                  moduleName = "metro_maps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/brazilec22/Documents/LCT_HACK/client/metro_maps/metro_maps/Application/MapsViewClass/ViewController/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "1216">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BFF346B5-ECA6-4A48-91DC-4BCADEC5F744"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -279,16 +231,48 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "48A8670B-35DE-499B-8F28-7E4A0A4EE516"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "metro_maps/Application/MapsViewClass/ViewController/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "fetch_mosdata_api()"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "48A8670B-35DE-499B-8F28-7E4A0A4EE516 - fd914148baa273d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in metro_maps.fetch_mosdata_api() -&gt; ()"
+                  moduleName = "metro_maps"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brazilec22/Documents/LCT_HACK/client/metro_maps/metro_maps/Application/MapsViewClass/ViewController/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1376">
+               </Location>
+               <Location
+                  uuid = "48A8670B-35DE-499B-8F28-7E4A0A4EE516 - fd914148baa273d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in metro_maps.fetch_mosdata_api() -&gt; ()"
+                  moduleName = "metro_maps"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brazilec22/Documents/LCT_HACK/client/metro_maps/metro_maps/Application/MapsViewClass/ViewController/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "3112">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -303,38 +287,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "fetch_mosdata_api()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "99DBDCBE-103E-4121-8C0A-2B7D36FB3666"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "metro_maps/Application/MapsViewClass/ViewController/NetworkService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "fetch_mosdata_api()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8ED00C2D-38F5-4E6B-BAA5-904E021F9AA2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "metro_maps/Application/MapsViewClass/ViewController/NetworkService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
             landmarkName = "fetch_mosdata_api()"
             landmarkType = "9">
          </BreakpointContent>
