@@ -190,6 +190,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wc-b7-D75">
+                                <rect key="frame" x="22" y="40" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="loadData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQG-FS-Pbc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -207,7 +215,7 @@
         <!--Map Scene Controller-->
         <scene sceneID="d1x-VN-6GA">
             <objects>
-                <viewController id="5Qr-YZ-scs" customClass="MapSceneController" customModule="metro_maps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapSceneID" id="5Qr-YZ-scs" customClass="MapSceneController" customModule="metro_maps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fun-In-Qk6"/>
                         <viewControllerLayoutGuide type="bottom" id="gEa-Ty-ViY"/>
@@ -279,6 +287,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRt-q8-ZV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="826.23688155922048"/>
+        </scene>
+        <!--mapSceneID-->
+        <scene sceneID="e3a-yq-MYm">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" referencedIdentifier="mapSceneID" id="AaJ-pq-clo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwh-6Y-IHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="661"/>
         </scene>
         <!--Layout Controller-->
         <scene sceneID="UI8-Yg-YSc">

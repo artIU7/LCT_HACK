@@ -29,6 +29,7 @@
 		B7FD5821254E4A4100A31385 /* RouteBuild+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5820254E4A4100A31385 /* RouteBuild+Helper.swift */; };
 		B7FD5825254E4D0600A31385 /* CoreGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5824254E4D0600A31385 /* CoreGraphicsView.swift */; };
 		B7FD5830254E602800A31385 /* RealmTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD582F254E602700A31385 /* RealmTableView.swift */; };
+		B7FD5834254E62CF00A31385 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5833254E62CF00A31385 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		B7FD5820254E4A4100A31385 /* RouteBuild+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteBuild+Helper.swift"; sourceTree = "<group>"; };
 		B7FD5824254E4D0600A31385 /* CoreGraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsView.swift; sourceTree = "<group>"; };
 		B7FD582F254E602700A31385 /* RealmTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableView.swift; sourceTree = "<group>"; };
+		B7FD5833254E62CF00A31385 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -220,6 +222,7 @@
 				B7FD5819254E469800A31385 /* MapSceneController.swift */,
 				B7FD5820254E4A4100A31385 /* RouteBuild+Helper.swift */,
 				B7FD582F254E602700A31385 /* RealmTableView.swift */,
+				B7FD5833254E62CF00A31385 /* NetworkService.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				B7F1640B254D713E00008FBB /* AppDelegate.swift in Sources */,
 				B7FD581A254E469800A31385 /* MapSceneController.swift in Sources */,
 				B7FD5830254E602800A31385 /* RealmTableView.swift in Sources */,
+				B7FD5834254E62CF00A31385 /* NetworkService.swift in Sources */,
 				B7FD57CC254D9F1200A31385 /* SVGLayoutController.swift in Sources */,
 				B7FD5807254DDBCA00A31385 /* MaterialView.swift in Sources */,
 				B7FD57E4254DA97400A31385 /* ModelStation.swift in Sources */,

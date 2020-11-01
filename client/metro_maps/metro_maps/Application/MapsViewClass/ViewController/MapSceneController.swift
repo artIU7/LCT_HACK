@@ -44,7 +44,6 @@ class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataS
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         coreRouter = NMACoreRouter()
 
         self.mapView.mapScheme = NMAMapSchemeNormalNightTransit
