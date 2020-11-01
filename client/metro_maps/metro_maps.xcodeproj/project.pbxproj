@@ -31,6 +31,7 @@
 		B7FD5830254E602800A31385 /* RealmTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD582F254E602700A31385 /* RealmTableView.swift */; };
 		B7FD5834254E62CF00A31385 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5833254E62CF00A31385 /* NetworkService.swift */; };
 		B7FD5837254E778E00A31385 /* MosDataExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5836254E778E00A31385 /* MosDataExit.swift */; };
+		B7FD5842254E953500A31385 /* SceneARStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5841254E953500A31385 /* SceneARStation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		B7FD582F254E602700A31385 /* RealmTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTableView.swift; sourceTree = "<group>"; };
 		B7FD5833254E62CF00A31385 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B7FD5836254E778E00A31385 /* MosDataExit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosDataExit.swift; sourceTree = "<group>"; };
+		B7FD5841254E953500A31385 /* SceneARStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneARStation.swift; sourceTree = "<group>"; };
 		E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 		B7FD57B9254D9C5200A31385 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				B7FD5840254E951C00A31385 /* ARSceneController */,
 				B7FD5823254E4CE800A31385 /* CoreGraphicsView */,
 				B7FD5816254E465B00A31385 /* MapsViewClass */,
 				B7FD57E1254DA94400A31385 /* RealmMetroStation */,
@@ -244,6 +247,14 @@
 				B7FD5824254E4D0600A31385 /* CoreGraphicsView.swift */,
 			);
 			path = CoreGraphicsView;
+			sourceTree = "<group>";
+		};
+		B7FD5840254E951C00A31385 /* ARSceneController */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD5841254E953500A31385 /* SceneARStation.swift */,
+			);
+			path = ARSceneController;
 			sourceTree = "<group>";
 		};
 		E3D873DCDAD9393DA165A28D /* Frameworks */ = {
@@ -386,6 +397,7 @@
 				B7FD5837254E778E00A31385 /* MosDataExit.swift in Sources */,
 				B7FD5821254E4A4100A31385 /* RouteBuild+Helper.swift in Sources */,
 				B7FD57DC254DA0C300A31385 /* ComputedRoute.swift in Sources */,
+				B7FD5842254E953500A31385 /* SceneARStation.swift in Sources */,
 				B7FD57D8254DA06A00A31385 /* ViewDrawSvgController.swift in Sources */,
 				B7FD581D254E477F00A31385 /* LocationManager.swift in Sources */,
 			);
