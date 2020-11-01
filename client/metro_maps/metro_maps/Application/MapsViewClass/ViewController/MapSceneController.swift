@@ -83,10 +83,12 @@ class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataS
         let marker = NMAMapMarker(geoCoordinates: positionAnchor, image: markerUI)
           marker.resetIconSize()
           marker.setSize(CGSize(width: 1, height: 1), forZoomRange: NSRange(location: 5,length: 20))
-          //markerAR["AR \(index)"] = marker
-          //infoMarker[marker.hashValue] = index
+       
           self.mapView.add(mapObject: marker)
       }
+    @IBAction func routeBuild(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 
