@@ -24,6 +24,7 @@
 		B7FD57F0254DAB4F00A31385 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57EF254DAB4F00A31385 /* RealmController.swift */; };
 		B7FD5807254DDBCA00A31385 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5806254DDBCA00A31385 /* MaterialView.swift */; };
 		B7FD5810254E2ADB00A31385 /* mt_hack_2020witoutTapGrid_night.svg in Resources */ = {isa = PBXBuildFile; fileRef = B7FD580F254E2ADB00A31385 /* mt_hack_2020witoutTapGrid_night.svg */; };
+		B7FD581A254E469800A31385 /* MapSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5819254E469800A31385 /* MapSceneController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		B7FD57EF254DAB4F00A31385 /* RealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 		B7FD5806254DDBCA00A31385 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		B7FD580F254E2ADB00A31385 /* mt_hack_2020witoutTapGrid_night.svg */ = {isa = PBXFileReference; lastKnownFileType = file; path = mt_hack_2020witoutTapGrid_night.svg; sourceTree = SOURCE_ROOT; };
+		B7FD5819254E469800A31385 /* MapSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSceneController.swift; sourceTree = "<group>"; };
 		E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 		B7FD57B9254D9C5200A31385 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				B7FD5816254E465B00A31385 /* MapsViewClass */,
 				B7FD57E1254DA94400A31385 /* RealmMetroStation */,
 				B7FD57DA254DA0A300A31385 /* RouteFindClass */,
 				B7FD57CF254D9F7B00A31385 /* ScrollViewLayoutController */,
@@ -191,6 +194,30 @@
 				B7FD57EF254DAB4F00A31385 /* RealmController.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B7FD5816254E465B00A31385 /* MapsViewClass */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD5818254E467200A31385 /* Helper+LocationManager */,
+				B7FD5817254E466A00A31385 /* ViewController */,
+			);
+			path = MapsViewClass;
+			sourceTree = "<group>";
+		};
+		B7FD5817254E466A00A31385 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD5819254E469800A31385 /* MapSceneController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B7FD5818254E467200A31385 /* Helper+LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Helper+LocationManager";
 			sourceTree = "<group>";
 		};
 		E3D873DCDAD9393DA165A28D /* Frameworks */ = {
@@ -320,6 +347,7 @@
 				B7FD57F0254DAB4F00A31385 /* RealmController.swift in Sources */,
 				B7FD57D5254D9FD600A31385 /* ScrollViewControllerLayout.swift in Sources */,
 				B7F1640B254D713E00008FBB /* AppDelegate.swift in Sources */,
+				B7FD581A254E469800A31385 /* MapSceneController.swift in Sources */,
 				B7FD57CC254D9F1200A31385 /* SVGLayoutController.swift in Sources */,
 				B7FD5807254DDBCA00A31385 /* MaterialView.swift in Sources */,
 				B7FD57E4254DA97400A31385 /* ModelStation.swift in Sources */,
