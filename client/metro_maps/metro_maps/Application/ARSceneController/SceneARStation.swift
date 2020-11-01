@@ -21,6 +21,7 @@ class SceneARController: UIViewController, ARSCNViewDelegate  {
         let scene = SCNScene()
         sceneView.scene = scene
         runSession()
+        billboardnew(SCNVector3(x: 0, y: 1, z: 0), value: "2.3 km")
     }
     func runSession() {
            configuration.worldAlignment = .gravityAndHeading
@@ -52,8 +53,7 @@ extension SceneARController {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
     }
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-       
-        }
+    }
     }
 extension SceneARController {
     // func computed offset for new coordinate

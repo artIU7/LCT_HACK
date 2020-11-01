@@ -32,6 +32,8 @@
 		B7FD5834254E62CF00A31385 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5833254E62CF00A31385 /* NetworkService.swift */; };
 		B7FD5837254E778E00A31385 /* MosDataExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5836254E778E00A31385 /* MosDataExit.swift */; };
 		B7FD5842254E953500A31385 /* SceneARStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5841254E953500A31385 /* SceneARStation.swift */; };
+		B7FD5845254E973900A31385 /* helper+addStationBilbboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5844254E973900A31385 /* helper+addStationBilbboard.swift */; };
+		B7FD5848254E97A800A31385 /* ar.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B7FD5847254E97A800A31385 /* ar.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		B7FD5833254E62CF00A31385 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B7FD5836254E778E00A31385 /* MosDataExit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosDataExit.swift; sourceTree = "<group>"; };
 		B7FD5841254E953500A31385 /* SceneARStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneARStation.swift; sourceTree = "<group>"; };
+		B7FD5844254E973900A31385 /* helper+addStationBilbboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "helper+addStationBilbboard.swift"; sourceTree = "<group>"; };
+		B7FD5847254E97A800A31385 /* ar.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ar.scnassets; sourceTree = "<group>"; };
 		E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -253,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				B7FD5841254E953500A31385 /* SceneARStation.swift */,
+				B7FD5844254E973900A31385 /* helper+addStationBilbboard.swift */,
+				B7FD5847254E97A800A31385 /* ar.scnassets */,
 			);
 			path = ARSceneController;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FD5848254E97A800A31385 /* ar.scnassets in Resources */,
 				B7FD57DF254DA26400A31385 /* mt_hack_2020.svg in Resources */,
 				B7F16417254D713F00008FBB /* LaunchScreen.storyboard in Resources */,
 				B7F16414254D713F00008FBB /* Assets.xcassets in Resources */,
@@ -385,6 +392,7 @@
 				B7FD57D5254D9FD600A31385 /* ScrollViewControllerLayout.swift in Sources */,
 				B7F1640B254D713E00008FBB /* AppDelegate.swift in Sources */,
 				B7FD581A254E469800A31385 /* MapSceneController.swift in Sources */,
+				B7FD5845254E973900A31385 /* helper+addStationBilbboard.swift in Sources */,
 				B7FD5830254E602800A31385 /* RealmTableView.swift in Sources */,
 				B7FD5834254E62CF00A31385 /* NetworkService.swift in Sources */,
 				B7FD57CC254D9F1200A31385 /* SVGLayoutController.swift in Sources */,
