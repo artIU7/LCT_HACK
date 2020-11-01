@@ -14,6 +14,7 @@ var tempPositin : CLLocationCoordinate2D!
 class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     private var data = [""]
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var stationInfo: UILabel!
     
     
     
@@ -28,7 +29,11 @@ class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "RealmViewCell", for: indexPath) as! RealmViewCell
-           cell.textLabel?.text = self.data[indexPath.row]
+            cell.textLabel?.text = self.data[indexPath.row]
+            cell.textLabel?.font = .systemFont(ofSize: 20)
+            cell.textLabel?.textAlignment = .left
+            cell.textLabel?.numberOfLines = 2
+           //stationInfo.text = self.data[indexPath.row]
            return cell
     }
     
@@ -87,7 +92,7 @@ class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataS
           self.mapView.add(mapObject: marker)
       }
     @IBAction func routeBuild(_ sender: Any) {
-        
+        self.routeBuild()
     }
     /*
     // MARK: - Navigation
@@ -98,7 +103,6 @@ class MapSceneController: UIViewController,UITableViewDelegate, UITableViewDataS
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 extension MapSceneController : NMAMapGestureDelegate,NMAMapViewDelegate {}
 extension MapSceneController : CLLocationManagerDelegate {}

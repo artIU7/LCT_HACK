@@ -110,5 +110,8 @@ extension MapSceneController {
 extension MapSceneController {
     func mapView(_ mapView: NMAMapView, didSelect objects: [NMAViewObject]) {
         print("select :: object \(objects)")
+
+        let position = objects.first as! NMAMapMarker
+        route.append(NMAGeoCoordinates(latitude: position.coordinates.latitude, longitude: position.coordinates.longitude))
     }
 }

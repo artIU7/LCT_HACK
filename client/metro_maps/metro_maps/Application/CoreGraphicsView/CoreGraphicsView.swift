@@ -24,7 +24,7 @@ class CoreGraphicsDraw: UIView {
             station(in: pathRect, rad: 10, color: color, centr: CGPoint(x: 40, y: 20 + i*50))
             station(in: pathRect, rad: 5, color: target, centr: CGPoint(x: 40, y: 20 + i*50))
         }
-        for i in 1...5 {
+        for i in 1...4 {
             path(in: pathRect, color: route, offset: i)
         }
     }
