@@ -23,6 +23,7 @@
 		B7FD57E4254DA97400A31385 /* ModelStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57E3254DA97400A31385 /* ModelStation.swift */; };
 		B7FD57F0254DAB4F00A31385 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD57EF254DAB4F00A31385 /* RealmController.swift */; };
 		B7FD5807254DDBCA00A31385 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD5806254DDBCA00A31385 /* MaterialView.swift */; };
+		B7FD5810254E2ADB00A31385 /* mt_hack_2020witoutTapGrid_night.svg in Resources */ = {isa = PBXBuildFile; fileRef = B7FD580F254E2ADB00A31385 /* mt_hack_2020witoutTapGrid_night.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		B7FD57E3254DA97400A31385 /* ModelStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStation.swift; sourceTree = "<group>"; };
 		B7FD57EF254DAB4F00A31385 /* RealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 		B7FD5806254DDBCA00A31385 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		B7FD580F254E2ADB00A31385 /* mt_hack_2020witoutTapGrid_night.svg */ = {isa = PBXFileReference; lastKnownFileType = file; path = mt_hack_2020witoutTapGrid_night.svg; sourceTree = SOURCE_ROOT; };
 		E484878DD277FAE2DFAF3D80 /* Pods_metro_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 		B7F16409254D713E00008FBB /* metro_maps */ = {
 			isa = PBXGroup;
 			children = (
+				B7FD580F254E2ADB00A31385 /* mt_hack_2020witoutTapGrid_night.svg */,
 				B7FD57DE254DA26400A31385 /* mt_hack_2020.svg */,
 				B7FD57B9254D9C5200A31385 /* Application */,
 				B7F16413254D713F00008FBB /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 				B7F16417254D713F00008FBB /* LaunchScreen.storyboard in Resources */,
 				B7F16414254D713F00008FBB /* Assets.xcassets in Resources */,
 				B7F16412254D713E00008FBB /* Main.storyboard in Resources */,
+				B7FD5810254E2ADB00A31385 /* mt_hack_2020witoutTapGrid_night.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

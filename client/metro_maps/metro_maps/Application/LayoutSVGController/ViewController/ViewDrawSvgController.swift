@@ -116,6 +116,14 @@ class SVGMacawView: MacawView {
                 nodeStation.opacity = 1.0
                 nodeStation.stroke = Stroke(fill: Color.white, width: 2)
             }
+            let stationPathCaption = self.node.nodeBy(tag: "station-caption-"+statiom)
+            let typeNodeT = type(of: stationPathCaption!)
+            if typeNodeT == Text.self {
+                let nodeStationT = stationPathCaption as! Text
+                nodeStationT.opacity = 1.0
+                nodeStationT.fill = Color.darkCyan
+            }
+            
         }
         var pathRoute = try! Realm().objects(ModelPath.self)
         print(pathRoute)
@@ -172,19 +180,21 @@ class SVGMacawView: MacawView {
     
     private func registerForSelection(nodeTag : String) {
         self.node.nodeBy(tag: nodeTag)?.onTouchPressed({ [self] (touch) in
-            
+            let nameStationRealm = try! Realm().objects(ModelStationName.self)
             let nodeShape = self.node.nodeBy(tag: nodeTag) // as! Shape//Shape
             let typeNode = type(of: nodeShape!)
             if typeNode == Shape.self {
                 let nodeSelectGroup = nodeShape as! Shape
                 nodeSelectGroup.opacity = 0.7
-                bufferSelected = nodeTag
+                let point = nameStationRealm.filter({ "station-" + $0.id == nodeTag})
                 for i in 0...nodeStation.count - 1 {
                     if "station-" + nodeStation[i].name == nodeTag {
                         if statusIndex == false {
                             firstIndex = i
+                            startPoint = point.first!.nameStation
                         } else {
                             lastIndex = i
+                            endPoint = point.first!.nameStation
                         }
                     }
                 }

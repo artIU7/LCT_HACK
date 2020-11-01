@@ -39,3 +39,12 @@ class ModelPath : Object {
         self.staionIDEnd = staionIDEnd
     }
 }
+class ModelStationName: Object {
+    @objc dynamic var id = ""
+    @objc dynamic var nameStation = ""
+    convenience init(id : String,nameStation : String) {
+        self.init()
+        self.id = id
+        self.nameStation = nameStation
+    }
+  }
